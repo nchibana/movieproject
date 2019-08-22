@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NYTimes Critics' Picks{{ title }}</title>
+        <!-- CSS, keywords, metadata goes here-->
+    </head>
+
+    <body>
+        <h1>NYTimes Critics' Picks From Last Month</h1>
+        {% block content %}
+        {% for review in reviews %}
+        <p>{{review.title}} - {{review.date}} - {{review.link}}</p>
+        {% endfor %}
+        {% endblock %}
+    </body>
+</html>
